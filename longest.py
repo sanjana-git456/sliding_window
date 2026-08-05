@@ -10,4 +10,4 @@ def longest(x,k):
             s -= x[left]
             left += 1
         m = max(m, right-left+1)
-    return m
+    return 
