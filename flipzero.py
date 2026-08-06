@@ -12,7 +12,7 @@ def flip(x,j):
         while c > k:
             if x[left] == 0:
                 c -= 1
-                left += 1
-        ans = max(ans, right-left+1)
+            left += 1
+        ans = max(ans, right-left)
     return ans
 print(flip(x,k))
