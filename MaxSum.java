@@ -5,16 +5,15 @@ public class MaxSum {
         int left = 0;
         int right = k - 1;
         int s = 0;
-        int ans = 0;
+        int ans = s;
         for (int i = 0; i <= k - 1; i++) {
             s += x[i];
         }
-        while (right < x.length) {
+        while (right + 1 < x.length) {
             right += 1;
             s = s - x[left] + x[right];
             left += 1;
             ans = Math.max(ans, s);
-
         }
         return ans;
     }
