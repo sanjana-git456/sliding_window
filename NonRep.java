@@ -11,9 +11,9 @@ public class NonRep {
             while (map.contains(x[right])) {
                 map.remove(x[left]);
                 left++;
-                map.add(x[right]);
             }
-
+            map.add(x[right]);
+            ans = Math.max(ans, right - left + 1);
         }
         return ans;
     }
