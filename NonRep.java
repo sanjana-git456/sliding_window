@@ -5,11 +5,16 @@ public class NonRep {
 
     public int non(char[] x) {
         int left = 0;
-        int window = x[0];
+        int ans = 0;
         HashSet<Character> map = new HashSet<>();
         for (int right = 0; right < x.length; right++) {
-            char c = x[right];
+            while (map.contains(x[right])) {
+                map.remove(x[left]);
+                left++;
+                map.add(x[right]);
+            }
 
         }
+        return ans;
     }
 }
