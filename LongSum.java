@@ -8,10 +8,10 @@ public class LongSum {
         for (int right = 0; right < x.length; right++) {
             s += x[right];
             while (s > k) {
-                s = s - x[left] + x[right];
+                s = s - x[left];
                 left++;
             }
-            ans = Math.max(ans, s);
+            ans = Math.max(ans, right - left);
         }
         return ans;
     }
