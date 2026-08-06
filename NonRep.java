@@ -17,4 +17,10 @@ public class NonRep {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        NonRep nr = new NonRep();
+        char[] arr = "aabcdbb".toCharArray();
+        System.out.println(nr.non(arr));
+    }
 }
