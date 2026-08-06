@@ -11,7 +11,7 @@ public class LongSum {
                 s = s - x[left];
                 left++;
             }
-            ans = Math.max(ans, right - left);
+            ans = Math.max(ans, right - left + 1);
         }
         return ans;
     }
